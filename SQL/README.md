@@ -1,24 +1,46 @@
 # 프로그래머스 SQL
 ### SELECT
 - 모든 레코드 조회하기
+    - SELECT * 써보기
 - 역순 정렬하기
+    - ORDER BY 써보기
 - 아픈 동물 찾기
+    - WHERE 써보기
 - 어린 동물 찾기
+    - WHERE 써보기
 - 동물의 아이디와 이름
+    - 여러 column을 가져오기
 - 여러 기준으로 정렬하기
+    - ORDER BY 기준 여러개 순차적으로 주기
 - 상위 n개 레코드
+    - LIMIT 써보기
 
 ### SUM, MAX, MIN
 - 최댓값 구하기
+    - MAX 사용해보기
 - 최솟값 구하기
+    - MIN 사용해보기
 - 동물 수 구하기
+    - SUM 사용해보기
 - 중복 제거하기
+    - DISTINCT 써보기
 
 ### GROUP BY
 - 고양이와 개는 몇마리 있을까
+    - GROUP BY 써보기
 - 동명 동물 수 찾기
+    - GROUP BY + 조건
 - 입양 시각 구하기(1)
+    - GROUP BY + 조건
 - 입양 시각 구하기(2)
+    - WITH로 임시 테이블 다뤄보기 / sql 변수 사용해보기
+
+### IS NULL
+- 이름이 없는 동물의 아이디
+    - IS NULL 사용해보기
+- 이름이 있는 동물의 아이디
+    - IS NOT NULL 사용해보기
+
 
 
 ### SQL Knowledge
@@ -121,7 +143,10 @@
         ) FROM table1
     ```
     - 입양 시각 구하기(2) 참고
-- 
+- IF문
+    ```
+    SELECT IF(IS NULL(column), '원하는 값', column) as NAME FROM table_name
+    ```
 
 
 
