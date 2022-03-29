@@ -41,6 +41,16 @@
 - 이름이 있는 동물의 아이디
     - IS NOT NULL 사용해보기
 
+### JOIN
+- 없어진 기록 찾기
+    - JOIN써보기
+- 있었는데요 없었습니다
+    - JOIN + ORDER BY
+- 오랜 기간 보호한 동물(1)
+    - JOIN + ORDER BY + LIMIT
+- 보호소에서 중성화한 동물
+    - JOIN + LIKE
+
 
 
 ### SQL Knowledge
@@ -147,6 +157,32 @@
     ```
     SELECT IF(IS NULL(column), '원하는 값', column) as NAME FROM table_name
     ```
+- JOIN
+    - LEFT JOIN은 왼쪽을 기준으로 오른쪽과의 교집합
+    - RIGHT JOIN은 오른쪽을 기준으로 왼쪽과의 교집합
+    - OUTER JOIN은 여집합
+    - INNER JOIN은 교집합
+    - 유의해야할점
+        - 출력하고자 하는 값이 포함된 컬럼을 SELECT 해야함!
+        - ON으로 table 합칠 기준 설정 필요함
+    ```
+    SELECT table1.id, table1.col FROM table1
+    LEFT JOIN table2 -- table1을 기준으로 table2와의 교집합을 찾음
+    ON table1.id = table2.id -- 합칠 기준
+    ```
+- LIKE : 원하는 문자열 포함 여부 확인하기
+    - 원하는 문자열 포함 여부
+        ```
+        WHERE column LIKE '%원하는 문자열%'
+        ```
+    - 원하는 문자열로 시작하는지
+        ```
+        WHERE column LIKE '%원하는 문자열'
+        ```
+    - 원하는 문자열로 끝나는지
+        ```
+        WHERE column LIKE '원하는 문자열%'
+        ```
 
 
 
