@@ -51,6 +51,18 @@
 - 보호소에서 중성화한 동물
     - JOIN + LIKE
 
+### String, Date
+- 루시와 엘라 찾기
+    - IN 사용해보기
+- 이름에 el이 들어가는 동물 찾기
+    - LIKE로 검색하기
+- 중성화 여부 파악하기
+    - IF사용하기
+- 오랜 기간 보호한 동물(2)
+    - operation 으로 기준 설정하기
+- DATETIME에서 DATE로 형 변환
+    - DATE_FORMAT으로 형 변홚 해보기
+
 
 
 ### SQL Knowledge
@@ -183,7 +195,26 @@
         ```
         WHERE column LIKE '원하는 문자열%'
         ```
+- IN : ()함께 사용해서 파이썬 list in 처럼 쓸 수 있음 
 
+    ```
+    WHERE item IN ('원소1','원소2','원소3')-- 괄호 내의 값 중 일치하는 것이 있으면 TRUE
+    ```
+- FORMAT : 내가 원하는 형식으로 바꿈
+    ```
+    FORMAT(NOW(),'%y-%m-%d)
+    ```
+- DATE_FORMAT : DATETIME 형을 내가 원하는 형식으로 바꿈
+    - 유의 사항
+        - %Y는 년도를 4자리 모두 표기함 ex) 2019
+        - %y는 년도를 마지막 두자리만 표기함 ex) 19
+        - %M은 달을 영어로 표기함 ex) April
+        - %m은 달을 숫자로 표기함 ex) 04
+        - %D는 일을 숫자+영어로 표기함 ex) 1st
+        - %d는 일을 숫자로 표기함 ex) 01
+    ```
+    DATE_FORMAT(DATETIME형 데이터, '%y-%m-%d)
+    ```
 
 
 
